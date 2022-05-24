@@ -10,7 +10,7 @@
 
 ## Why?
 
-Vite.js provides its own mechanism (meta env) for exposing environment variables through `import.meta.env`, but hostings like Netlify can't import variables defined in `import.meta.env`.
+Vite.js provides its own mechanism (meta env) for exposing environment variables through `import.meta.env`, but hostings like Netlify can't import variables defined in `import.meta.env`. [Here is the issue](https://github.com/vitejs/vite/issues/562)
 
 This plugin injects environment variables in `process.env` by configuring the `define` option.
 
