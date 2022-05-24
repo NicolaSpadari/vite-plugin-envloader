@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-envloader",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "Inject Vite.js import.meta.env variables into process.env",
     "keywords": [
         "env",
@@ -10,9 +10,10 @@
         "vite-plugin",
         "vitejs"
     ],
-    "main": "index.ts",
-    "type": "module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
+        "build": "tsup src/index.ts --dts",
         "publish:patch": "npm version patch --no-git-tag-version && npm publish",
         "publish:minor": "npm version minor --no-git-tag-version && npm publish",
         "publish:major": "npm version major --no-git-tag-version && npm publish"
@@ -32,10 +33,11 @@
         "@antfu/eslint-config": "^0.5.1",
         "@types/node": "^17.0.35",
         "eslint": "^7.32.0",
-        "typescript": "^4.6.3",
+        "tsup": "^5.12.8",
+        "typescript": "^4.6.4",
         "vite": "^2.9.9"
     },
     "peerDependencies": {
-        "vite": "^2.7"
+        "vite": "^2.9.9"
     }
 }

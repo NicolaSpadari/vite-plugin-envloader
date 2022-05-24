@@ -1,6 +1,7 @@
 import type { Plugin } from "vite";
+import { name } from "../package.json";
 
-const portKeys = () => {
+const loadEnvKeys = () => {
     const VITE_ENV: Record<string, string> = {};
 
     Object.keys(process.env).forEach((key) => {
@@ -14,14 +15,14 @@ const portKeys = () => {
 
 const EnvLoader = (): Plugin => {
     return {
-        name: "vite-plugin-env-loader",
+        name,
+        enforce: "pre",
         config() {
             return {
-                define: portKeys(),
+                define: loadEnvKeys()
             };
-        },
+        }
     };
 };
 
-export { EnvLoader };
 export default EnvLoader;

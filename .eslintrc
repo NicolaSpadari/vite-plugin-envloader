@@ -10,20 +10,12 @@
         "no-console": ["off"],
         "no-new-func": ["off"],
         "arrow-parens": ["error", "always"],
+        "comma-dangle": ["off"],
         "antfu/import-dedupe": ["off"],
         "@typescript-eslint/semi": ["warn", "always"],
         "@typescript-eslint/indent": ["off"],
         "@typescript-eslint/quotes": ["error", "double"],
         "@typescript-eslint/comma-dangle": ["warn", "never"],
-        "@typescript-eslint/brace-style": ["error", "1tbs"],
-        "vue/html-indent": ["error", 4, {
-            "baseIndent": 1
-        }],
-        "vue/script-indent": ["error", 4, {
-            "baseIndent": 1
-        }],
-        "vue/component-tags-order": ["error", {
-            "order": ["template", "script", "style"]
-        }]
+        "@typescript-eslint/brace-style": ["error", "1tbs"]
     }
 }
