@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-envloader",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Inject Vite.js import.meta.env variables into process.env",
     "keywords": [
         "env",
